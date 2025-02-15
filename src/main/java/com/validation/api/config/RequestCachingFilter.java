@@ -1,4 +1,4 @@
-package com.javatechie.api.config;
+package com.validation.api.config;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

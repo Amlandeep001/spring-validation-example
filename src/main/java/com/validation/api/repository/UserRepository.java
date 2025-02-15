@@ -1,8 +1,8 @@
-package com.javatechie.api.repository;
+package com.validation.api.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.javatechie.api.entity.User;
+import com.validation.api.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer>
 {

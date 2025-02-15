@@ -1,4 +1,4 @@
-package com.javatechie.api.controller;
+package com.validation.api.controller;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.javatechie.api.dto.UserRequest;
-import com.javatechie.api.entity.User;
-import com.javatechie.api.exception.UserNotFoundException;
-import com.javatechie.api.service.UserService;
+import com.validation.api.dto.UserRequest;
+import com.validation.api.entity.User;
+import com.validation.api.exception.UserNotFoundException;
+import com.validation.api.service.UserService;
 
 import jakarta.validation.Valid;
 

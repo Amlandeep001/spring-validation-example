@@ -1,4 +1,4 @@
-package com.javatechie.api.entity;
+package com.validation.api.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

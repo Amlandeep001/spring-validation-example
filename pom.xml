@@ -9,8 +9,8 @@
 		<version>3.4.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.javatechie</groupId>
-	<artifactId>validation-example</artifactId>
+	<groupId>com.validation.api</groupId>
+	<artifactId>spring-validation-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>validation-example</name>
 	<description>Demo project for Spring Boot</description>

@@ -1,13 +1,13 @@
-package com.javatechie.api.service;
+package com.validation.api.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.javatechie.api.dto.UserRequest;
-import com.javatechie.api.entity.User;
-import com.javatechie.api.exception.UserNotFoundException;
-import com.javatechie.api.repository.UserRepository;
+import com.validation.api.dto.UserRequest;
+import com.validation.api.entity.User;
+import com.validation.api.exception.UserNotFoundException;
+import com.validation.api.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

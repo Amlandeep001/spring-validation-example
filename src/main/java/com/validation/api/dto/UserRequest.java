@@ -1,4 +1,4 @@
-package com.javatechie.api.dto;
+package com.validation.api.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;

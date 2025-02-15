@@ -1,4 +1,4 @@
-package com.javatechie.api;
+package com.validation.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -2,7 +2,6 @@ package com.validation.api.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,14 +17,14 @@ import com.validation.api.exception.UserNotFoundException;
 import com.validation.api.service.UserService;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/users")
+@RequiredArgsConstructor
 public class UserController
 {
-
-	@Autowired
-	private UserService service;
+	private final UserService service;
 
 	@PostMapping("/signup")
 	public ResponseEntity<User> saveUser(@RequestBody @Valid UserRequest userRequest)

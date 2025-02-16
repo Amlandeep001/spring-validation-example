@@ -49,7 +49,8 @@ public class ApplicationExceptionHandler
 		String requestBody = new String(cachedRequest.getContentAsByteArray(), StandardCharsets.UTF_8);
 
 		// Log the full JSON request along with error details
-		log.error("400 Bad Request for URI: {} | Errors: {} | Request JSON: {}", requestUri, errorMap, requestBody);
+		log.error("400 Bad Request for URI: {} | Errors: {} | Request JSON: {}, this request failed at validation " +
+				"layer", requestUri, errorMap, requestBody);
 
 		return errorMap;
 	}

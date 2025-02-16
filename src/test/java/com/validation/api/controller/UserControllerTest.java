@@ -98,7 +98,7 @@ class UserControllerTest
 	}
 
 	@Test
-	@DisplayName("getUser should return 404 Not Found when user is not found")
+	@DisplayName("getUser should throw UserNotFoundException when user is not found")
 	void getUserShouldReturnNotFoundWhenUserIsNotFound() throws UserNotFoundException
 	{
 		final int userId = 99;

@@ -1,8 +1,7 @@
 package com.validation.api.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.validation.api.constant.Gender;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,7 +22,10 @@ public class User
 	String name;
 	String email;
 	String mobile;
-	String gender;
+
+	@Enumerated(EnumType.STRING)
+	Gender gender;
+
 	int age;
 	String nationality;
 }

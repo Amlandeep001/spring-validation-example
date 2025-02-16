@@ -2,12 +2,14 @@ package com.validation.api.config;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Map;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.util.ContentCachingRequestWrapper;
 
 import jakarta.servlet.FilterChain;
@@ -38,13 +40,13 @@ public class RequestCachingFilter extends OncePerRequestFilter
 		if(httpMethod == HttpMethod.GET)
 		{
 			// Log query parameters for GET requests
-			String queryParams = request.getQueryString();
-			log.info("Input {} REQUEST QUERY PARAMS: {}", httpMethod, queryParams != null ? queryParams : "No query parameters");
+			final Map<?, ?> pathVariables = (Map<?, ?>) request.getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
+			log.info("Input {} REQUEST Path Variables: {}", httpMethod, pathVariables != null ? pathVariables : "No path variables");
 		}
 		else
 		{
 			// Log request body for other methods (e.g., POST, PUT)
-			String requestBody = new String(wrappedRequest.getContentAsByteArray(), StandardCharsets.UTF_8);
+			final String requestBody = new String(wrappedRequest.getContentAsByteArray(), StandardCharsets.UTF_8);
 			log.info("Input REQUEST JSON: {}", requestBody);
 		}
 	}

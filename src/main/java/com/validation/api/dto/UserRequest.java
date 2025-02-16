@@ -1,5 +1,8 @@
 package com.validation.api.dto;
 
+import com.validation.api.constant.Gender;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -16,23 +19,24 @@ import lombok.extern.jackson.Jacksonized;
 public class UserRequest
 {
 	@NotNull(message = "id shouldn't be null")
-	private int id;
+	int id;
 
 	@NotNull(message = "username shouldn't be null")
-	private String name;
+	String name;
 
 	@Email(message = "invalid email address")
-	private String email;
+	String email;
 
 	@Pattern(regexp = "^\\d{10}$", message = "invalid mobile number entered ")
-	private String mobile;
+	String mobile;
 
-	private String gender;
+	@Enumerated(EnumType.STRING)
+	Gender gender;
 
 	@Min(18)
 	@Max(60)
-	private int age;
+	int age;
 
 	@NotBlank
-	private String nationality;
+	String nationality;
 }

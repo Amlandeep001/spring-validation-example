@@ -47,7 +47,7 @@ public class RequestCachingFilter extends OncePerRequestFilter
 		{
 			// Log request body for other methods (e.g., POST, PUT)
 			final String requestBody = new String(wrappedRequest.getContentAsByteArray(), StandardCharsets.UTF_8);
-			log.info("Input REQUEST json: {}", requestBody);
+			log.info("Input REQUEST JSON: {}", requestBody);
 		}
 	}
 }

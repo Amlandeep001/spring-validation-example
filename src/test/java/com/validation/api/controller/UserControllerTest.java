@@ -72,14 +72,14 @@ class UserControllerTest
 	void getAllUsersShouldReturnOkWithListOfUsers()
 	{
 		List<User> users = Arrays.asList(user, User.build(2, "Ahaan Pandey", "ahaan.pandey@example.com", "0123456789", Gender.Male, 25, "Indian"));
-		when(userService.getALlUsers()).thenReturn(users);
+		when(userService.getAllUsers()).thenReturn(users);
 
 		ResponseEntity<List<User>> response = userController.getAllUsers();
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
 		assertNotNull(response.getBody());
 		assertEquals(2, response.getBody().size());
-		verify(userService, times(1)).getALlUsers();
+		verify(userService, times(1)).getAllUsers();
 	}
 
 	@Test
